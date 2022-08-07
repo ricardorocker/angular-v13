@@ -15,12 +15,12 @@ export class TitleComponent implements OnInit, OnChanges {
   constructor() { }
 
   ngOnInit(): void {
-    this.title = "Bem vindo";
+    this.title = "title.component: Bem vindo";
   }
 
   // Seção 03 Ciclo de Vida: ngOnChanges
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("subTitle foi alterado de 'Estudando Angular' para 'Curso de Angular' no app.component");
+    console.log("title.component: subTitle foi alterado de 'Estudando Angular' para 'Curso de Angular' no app.component");
   }
 
 }
