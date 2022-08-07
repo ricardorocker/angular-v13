@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <app-title></app-title>
+  <!-- Seção 03 Ciclo de Vida: ngOnChanges -->
+  <app-title subTitle="Curso de Angular"></app-title>
   <router-outlet></router-outlet>`
 
 })
