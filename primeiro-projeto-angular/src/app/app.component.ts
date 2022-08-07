@@ -7,16 +7,20 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
   <!-- Seção 03 Ciclo de Vida: ngOnChanges -->
-  <app-title subTitle="Curso de Angular"></app-title>
+  <app-title *ngIf="!destruir" subTitle="Curso de Angular"></app-title>
+  <!-- Seção 03 Ciclo de Vida: ngOnDestroy -->
+  <br>
+  <button (click)="destruirComponent()">Destruir Componente</button>
   <router-outlet></router-outlet>
   `
 
 })
 export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
 
+  destruir: boolean = false;
   valor: number = 1;
 
-  constructor() {}
+  constructor() { }
 
   // Seção 03 Ciclo de Vida: ngOnInit
   ngOnInit(): void {
@@ -25,6 +29,12 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
     setTimeout(() => {
       console.log("app.component: 5 segundos.");
     }, 5000)
+  }
+
+
+  // Seção 03 Ciclo de Vida: ngOnDestroy
+  destruirComponent(): void {
+    this.destruir = true;
   }
 
 
@@ -49,7 +59,7 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
     console.log("app.component: ngAfterViewChecked");
   }
 
-  adicionar(): number{
+  adicionar(): number {
     return this.valor += 1;
   }
 }
