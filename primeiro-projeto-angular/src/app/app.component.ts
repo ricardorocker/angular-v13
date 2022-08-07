@@ -7,7 +7,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
   <!-- Seção 03 Ciclo de Vida: ngOnChanges -->
-  <app-title *ngIf="!destruir" subTitle="Curso de Angular"></app-title>
+  <app-ciclo-vida *ngIf="!destruir" subTitle="Curso de Angular"></app-ciclo-vida>
   <!-- Seção 03 Ciclo de Vida: ngOnDestroy -->
   <br>
   <button (click)="destruirComponent()">Destruir Componente</button>

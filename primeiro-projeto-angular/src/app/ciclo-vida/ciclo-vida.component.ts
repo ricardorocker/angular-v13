@@ -1,11 +1,11 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-title',
-  templateUrl: './title.component.html',
-  styleUrls: ['./title.component.css']
+  selector: 'app-ciclo-vida',
+  templateUrl: './ciclo-vida.component.html',
+  styleUrls: ['./ciclo-vida.component.css']
 })
-export class TitleComponent implements OnInit, OnChanges, OnDestroy {
+export class CicloVidaComponent implements OnInit, OnChanges, OnDestroy {
 
   title: string = "";
 
@@ -15,17 +15,17 @@ export class TitleComponent implements OnInit, OnChanges, OnDestroy {
   constructor() { }
 
   ngOnInit(): void {
-    this.title = "title.component: Bem vindo";
+    this.title = "ciclo-vida.component: Bem vindo";
   }
 
   // Seção 03 Ciclo de Vida: ngOnChanges
   ngOnChanges(changes: SimpleChanges): void {
-    console.log("title.component: subTitle foi alterado de 'Estudando Angular' para 'Curso de Angular' no app.component");
+    console.log("ciclo-vida.component: subTitle foi alterado de 'Estudando Angular' para 'Curso de Angular' no app.component");
   }
 
   // Seção 03 Ciclo de Vida: ngOnDestroy
   ngOnDestroy(): void {
-    console.log("title.component: DESTRUIDO!")
+    console.log("ciclo-vida.component: DESTRUIDO!")
   }
 
 }

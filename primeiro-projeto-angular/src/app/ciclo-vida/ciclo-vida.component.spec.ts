@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TitleComponent } from './title.component';
+import { CicloVidaComponent } from './ciclo-vida.component';
 
-describe('TitleComponent', () => {
-  let component: TitleComponent;
-  let fixture: ComponentFixture<TitleComponent>;
+describe('CicloVidaComponent', () => {
+  let component: CicloVidaComponent;
+  let fixture: ComponentFixture<CicloVidaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TitleComponent ]
+      declarations: [ CicloVidaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TitleComponent);
+    fixture = TestBed.createComponent(CicloVidaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
