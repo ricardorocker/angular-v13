@@ -1,8 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '1 <router-outlet></router-outlet>'
+  template: `
+  <app-title></app-title>
+  <router-outlet></router-outlet>`
+
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  constructor() {}
+
+  // Seção 03 Ciclo de Vida: ngOnInit
+  ngOnInit(): void {
+    console.log("ngOnInit Executado!");
+
+    setTimeout(() => {
+      console.log("5 segundos.");
+    }, 5000)
+  }
 }
