@@ -3,6 +3,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
+  <h1>LIFE CIRCLES</h1>
   <!-- Seção 03 Ciclo de Vida: ngDoCheck -->
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
@@ -11,6 +12,10 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   <!-- Seção 03 Ciclo de Vida: ngOnDestroy -->
   <br>
   <button (click)="destruirComponent()">Destruir Componente</button>
+  <br><br>
+  <hr>
+  <h1>DATA BINDING</h1>
+  <app-data-biding></app-data-biding>
   <router-outlet></router-outlet>
   `
 

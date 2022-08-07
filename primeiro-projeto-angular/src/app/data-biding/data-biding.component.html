@@ -1,0 +1,19 @@
+<h2>Interpolation</h2>
+<p>{{ nome }} tem {{ idade }} anos!</p>
+<p>{{ nome }} tem mais de 28 anos? {{ idade > 28 ? "SIM" : "NÃO" }}</p>
+
+<h2>Property Binding</h2>
+<img [src]="imgSrc" [alt]="imgAlt">
+<div>
+<button [disabled]="checkedDisabled">Testar propertyBinding</button>
+</div>
+
+<h2>Event Binding</h2>
+<button (click)="alertaInfo('Deu bom Rocker!')">Evento valor:string</button>
+<br><br>
+<button (click)="alertaEvento($event)">Evento valor:mouseEvent</button>
+
+<h2>Two-way binding</h2>
+<input [(ngModel)]="nome">
+{{ nome }}
+
