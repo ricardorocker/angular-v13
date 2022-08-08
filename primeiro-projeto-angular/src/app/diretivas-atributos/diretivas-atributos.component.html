@@ -1,0 +1,23 @@
+<ng-content select="hr"></ng-content>
+<ng-content select="h1"></ng-content>
+
+<h2>ngClass</h2>
+<p [ngClass]="{'active': isActive, 'disabled': !isActive}">ngClass</p>
+
+<h2>ngStyle</h2>
+<p [ngStyle]="{'height': heightPx, 'background': backgroundColor}">ngStyle</p>
+
+<h2>ngModel</h2>
+<input [(ngModel)]="nome">
+<button (click)="adicionarNome()">Adicionar Nome</button>
+<li *ngFor="let item of list">{{ item.nome }}</li>
+
+<h2>ngTemplate</h2>
+<ng-template ngFor let-item [ngForOf]="list">
+  <p>
+    {{item.nome}}
+  </p>
+</ng-template>
+
+<h2>Pipe</h2>
+{{ date | date: 'dd/mm/yyyy' }}

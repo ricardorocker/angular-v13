@@ -16,6 +16,11 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   <hr>
   <h1>DATA BINDING</h1>
   <app-data-biding></app-data-biding>
+  <app-diretivas-estruturais></app-diretivas-estruturais>
+  <app-diretivas-atributos>
+  <hr>
+  <h1>DIRETIVAS DE ATRIBUTOS</h1>
+  </app-diretivas-atributos>
   <router-outlet></router-outlet>
   `
 

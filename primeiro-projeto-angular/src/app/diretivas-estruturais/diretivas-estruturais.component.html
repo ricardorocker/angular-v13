@@ -1,0 +1,45 @@
+<br><br>
+<hr>
+<h1>DIRETIVAS ESTRUTURAIS</h1>
+<h2>*ngIf</h2>
+<p *ngIf="condition; else elseBlock">ngIf = "True"</p>
+<ng-template #elseBlock>
+  <p>
+    ngIf = "False"
+  </p>
+</ng-template>
+
+<p *ngIf="conditionClick">
+  conditionClick: True
+</p>
+
+<p *ngIf="!conditionClick">
+  conditionClick: False
+</p>
+
+<button (click)="onClick()">Clicar</button>
+
+
+<h2>*ngFor</h2>
+<ul>
+  <li *ngFor="let item of list; let i = index" (click)="onClickEventList($event)" (click)="onClickRemove(i)">
+    [{{i}}] {{ item.nome }} - idade = {{ item.idade }}
+  </li>
+</ul>
+
+<button (click)="onClickAddList()">Adicionar Rosangela</button>
+
+<h2>*ngSwitch</h2>
+
+<input [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'Ricardo'">
+    Estudando Angular!
+  </p>
+  <p *ngSwitchCase="'Petrucia'">
+    Estudando HTML!
+  </p>
+  <p *ngSwitchDefault>
+    Digite o nome..
+  </p>
+</div>
