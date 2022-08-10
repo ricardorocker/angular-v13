@@ -3,7 +3,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 @Component({
   selector: 'app-root',
   template: `
-  <h1>LIFE CIRCLES</h1>
+  <h1>LIFE CIRCLES em "app.component"</h1>
   <!-- Seção 03 Ciclo de Vida: ngDoCheck -->
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
