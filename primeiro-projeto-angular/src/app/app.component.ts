@@ -4,6 +4,15 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   selector: 'app-root',
   template: `
   <h1>LIFE CIRCLES em "app.component"</h1>
+  <ul>
+    <li>ngOnInit</li>
+    <li>ngDoCheck</li>
+    <li>ngAfterContentInit</li>
+    <li>ngAfterContentChecked</li>
+    <li>ngAfterViewInit</li>
+    <li>ngAfterViewChecked</li>
+    <li>ngOnDestroy</li>
+  </ul>
   <!-- Seção 03 Ciclo de Vida: ngDoCheck -->
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
