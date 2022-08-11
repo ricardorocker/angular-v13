@@ -32,6 +32,8 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
   constructor() { }
 
+  // REvisão de conteudo
+
   // Seção 03 Ciclo de Vida: ngOnInit
   ngOnInit(): void {
     console.log("app.component: ngOnInit Executado!");
