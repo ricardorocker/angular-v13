@@ -13,24 +13,44 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
     <li>ngAfterViewChecked</li>
     <li>ngOnDestroy</li>
   </ul>
+
   <!-- Seção 03 Ciclo de Vida: ngDoCheck -->
   {{ valor }}
   <button (click)="adicionar()">Adicionar</button>
+
   <!-- Seção 03 Ciclo de Vida: ngOnChanges -->
   <app-ciclo-vida *ngIf="!destruir" subTitle="Curso de Angular"></app-ciclo-vida>
+
   <!-- Seção 03 Ciclo de Vida: ngOnDestroy -->
   <br>
   <button (click)="destruirComponent()">Destruir Componente</button>
   <br><br>
+
   <hr>
   <h1>DATA BINDING</h1>
   <app-data-biding></app-data-biding>
+
   <app-diretivas-estruturais></app-diretivas-estruturais>
+
   <app-diretivas-atributos>
+
   <hr>
   <h1>DIRETIVAS DE ATRIBUTOS</h1>
   </app-diretivas-atributos>
+
   <app-new-component></app-new-component>
+
+  <app-input [valorRecebido]="valorEnviado"></app-input>
+  <button (click)="addValor()">Adicionar 1</button>
+
+  <hr>
+  <h1>Output</h1>
+  <ng-template [ngIf]="getDados">
+  <h2>{{ getDados.nome }}</h2>
+  <h3>{{ getDados.idade }}</h3>
+  </ng-template>
+  <app-output (enviarDados)="setDados($event)"></app-output>
+
   <router-outlet></router-outlet>
   `
 
@@ -39,10 +59,18 @@ export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterCon
 
   destruir: boolean = false;
   valor: number = 1;
+  valorEnviado = 10;
+  getDados: { nome: string, idade: number } | undefined;
 
   constructor() { }
 
-  // REvisão de conteudo
+  setDados(event: { nome: string, idade: number }){
+    this.getDados = event;
+  }
+
+  addValor(): void {
+    this.valorEnviado += 1;
+  }
 
   // Seção 03 Ciclo de Vida: ngOnInit
   ngOnInit(): void {
