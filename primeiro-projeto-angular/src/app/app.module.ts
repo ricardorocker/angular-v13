@@ -1,3 +1,5 @@
+import { SharedModule } from './shared/shared.module';
+import { NewComponentComponent } from './shared/new-component/new-component.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,12 +17,13 @@ import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atr
     CicloVidaComponent,
     DataBidingComponent,
     DiretivasEstruturaisComponent,
-    DiretivasAtributosComponent
+    DiretivasAtributosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

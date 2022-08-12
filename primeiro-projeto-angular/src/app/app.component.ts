@@ -30,6 +30,7 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   <hr>
   <h1>DIRETIVAS DE ATRIBUTOS</h1>
   </app-diretivas-atributos>
+  <app-new-component></app-new-component>
   <router-outlet></router-outlet>
   `
 
